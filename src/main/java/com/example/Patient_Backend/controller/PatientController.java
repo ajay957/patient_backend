@@ -11,5 +11,9 @@ public class PatientController {
     public String HomePage(){
         return "welcome to home page of patient";
     }
+    @PostMapping("/add")
+    public String AddPatient(){
+        return "Patient added successfully";
+    }
 
 }
