@@ -27,6 +27,7 @@ public class PatientController {
         dao.save(p);
         return "Patient added successfully";
     }
+    @CrossOrigin(origins = "*")
     @GetMapping("/view")
     public List<Patient> ViewPatient(){
         return(List<Patient>) dao.findAll();
