@@ -15,5 +15,9 @@ public class PatientController {
     public String AddPatient(){
         return "Patient added successfully";
     }
+    @GetMapping("/view")
+    public String ViewPatient(){
+        return "welcome to view patient page";
+    }
 
 }
