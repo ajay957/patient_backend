@@ -14,17 +14,19 @@ public class Patient {
     private int patientId;
     private String patientName;
     private String dateOfAppo;
+    private String image;
     private String mobNo;
     private String doctorName;
 
     public Patient() {
     }
 
-    public Patient(int id, int patientId, String patientName, String dateOfAppo, String mobNo, String doctorName) {
+    public Patient(int id, int patientId, String patientName, String dateOfAppo, String image, String mobNo, String doctorName) {
         this.id = id;
         this.patientId = patientId;
         this.patientName = patientName;
         this.dateOfAppo = dateOfAppo;
+        this.image = image;
         this.mobNo = mobNo;
         this.doctorName = doctorName;
     }
@@ -59,6 +61,14 @@ public class Patient {
 
     public void setDateOfAppo(String dateOfAppo) {
         this.dateOfAppo = dateOfAppo;
+    }
+
+    public String getImage() {
+        return image;
+    }
+
+    public void setImage(String image) {
+        this.image = image;
     }
 
     public String getMobNo() {
