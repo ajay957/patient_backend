@@ -22,6 +22,7 @@ public class PatientController {
         System.out.println(p.getPatientId());
         System.out.println(p.getPatientName().toString());
         System.out.println(p.getDateOfAppo().toString());
+        System.out.println(p.getImage().toString());
         System.out.println(p.getMobNo().toString());
         System.out.println(p.getDoctorName().toString());
         dao.save(p);
