@@ -5,6 +5,7 @@ import com.example.Patient_Backend.model.Patient;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.HashMap;
 import java.util.List;
 
 @RestController
@@ -40,6 +41,17 @@ public class PatientController {
         String patientName=String.valueOf(p.getPatientName());
         System.out.println(patientName);
         return (List<Patient>) dao.SearchPatient(p.getPatientName());
+    }
+
+    @CrossOrigin(origins = "*")
+    @PostMapping(path = "/delete",consumes = "application/json",produces = "application/json")
+    public HashMap<String,String> deletePatient(@RequestBody Patient p){
+        String pid=String.valueOf(p.getId());
+        System.out.println(pid);
+        dao.deletePatient(p.getId());
+        HashMap<String,String> map=new HashMap<>();
+        map.put("status","success");
+        return map;
     }
 
 }
